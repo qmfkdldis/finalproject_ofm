@@ -4,7 +4,7 @@
 
 <html>
 <head>
-	<title>Home</title>
+
 	<style type="text/css">
 	*{
 		margin: 0px;
@@ -73,6 +73,7 @@
 	</style>
 </head>
 <body>
+
 <div id ="main_top1">
 	<div id="main_top1_1">
 	<div id ="main_top1_2">
@@ -89,5 +90,6 @@
 
 <div id="main_bottom1"></div>
 <div id="main_bottom2"></div>
+
 </body>
 </html>
