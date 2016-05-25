@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		
+	<!-- mybatis 1) DataSource -->
+	<bean id="dataSoruce" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+			<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+		<property name="username" value="ofm"></property>
+		<property name="password" value="ofm"></property>
+	</bean>
+	<!-- mybatis 2) SqlFactory -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSoruce"></property>
+		<property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"></property>
+	</bean>
+	<!-- mybatis 3) SqlSession -->
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
+	</bean>
+	
+	<context:component-scan base-package="com.ofm.member"></context:component-scan>
+	<context:component-scan base-package="com.ofm.communication"></context:component-scan>
+	<context:component-scan base-package="com.ofm.product"></context:component-scan>
+	<context:component-scan base-package="com.ofm.review"></context:component-scan>
+	<context:component-scan base-package="com.ofm.interior"></context:component-scan>
+	<context:component-scan base-package="com.ofm.purlist"></context:component-scan>
+	<context:component-scan base-package="com.ofm.cart"></context:component-scan>
+	<context:component-scan base-package="com.ofm.qna"></context:component-scan>
+	<context:component-scan base-package="com.ofm.interceptor"></context:component-scan>
+		
+		
+		
+	</beans>
