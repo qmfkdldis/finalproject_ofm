@@ -54,12 +54,7 @@
 		width: 1423px;
 		
 	}
-	#main_middle{
-		width: 1100px;
-		background-color: blue;
-		height: 1000px;
-		margin: 20px auto;
-	}
+	
 </style>
 </head>
 <body>
@@ -75,6 +70,6 @@
 </div>
 <div id ="main_top2"></div>
 
-<div id="main_middle"></div>
+
 </body>
 </html>
