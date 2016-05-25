@@ -15,15 +15,7 @@
 		<property name="username" value="ofm"></property>
 		<property name="password" value="ofm"></property>
 	</bean>
-	<!-- mybatis 2) SqlFactory -->
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSoruce"></property>
-		<property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"></property>
-	</bean>
-	<!-- mybatis 3) SqlSession -->
-	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
-	</bean>
+	
 	
 	<context:component-scan base-package="com.ofm.member"></context:component-scan>
 	<context:component-scan base-package="com.ofm.communication"></context:component-scan>

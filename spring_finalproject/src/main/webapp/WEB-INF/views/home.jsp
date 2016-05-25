@@ -5,8 +5,16 @@
 <html>
 <head>
 	<title>Home</title>
+	<style type="text/css">
+	div{
+		background-color: yellow;
+		height: 10%;
+	}
+	</style>
 </head>
 <body>
 park
+
+<div></div>
 </body>
 </html>
